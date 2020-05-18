@@ -18,14 +18,16 @@
   <div class="container">
   <!-- --------greeting------------ -->
     <div class="jumbotron">
+        <img src='assets/logo_full.svg'></img>
         <h1 class="display-4">Product Work Intake Form</h1>
         <p class="lead">Submit your details for ideas or needs below</p>
+        <button class="btn btn-primary" type="button" id="submitButton">Let's Get Started</button>
       </div>
 
-    <div class="row">
+    <div class="row" id="mainform" style="display:none;" >
       <div class="col-sm">
         <!-- -----------Form begin--------- -->
-      <form id="main-form">
+      <form id="form">
         <div class="form-group">
           <label for="Subject">Subject</label>
           <textarea class="form-control" id="Subject" rows="1"></textarea>
@@ -52,7 +54,7 @@
       </div>
          
         <!-- -----submit button-------- -->
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" id="submitButton" class="btn btn-primary">Submit</button>
 
     <!-- ------form end-------- -->
       </form>
