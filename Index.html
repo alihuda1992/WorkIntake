@@ -11,20 +11,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
     <script src="script.js"></script>
-    
 </head>
+  <!---------- Begin Body------------>
 <body>
-  
-  <div class="container">
+ 
+  <div class="container" >
   <!-- --------greeting------------ -->
     <div class="jumbotron">
         <img src='assets/logo_full.svg'></img>
         <h1 class="display-4">Product Work Intake Form</h1>
         <p class="lead">Submit your details for ideas or needs below</p>
-        <button class="btn btn-primary" type="button" id="submitButton">Let's Get Started</button>
+        <button class="btn btn-primary" data-toggle="collapse" href="#mainform" type="button" id="startButton">Let's Get Started</button>
       </div>
 
-    <div class="row" id="mainform" style="display:none;" >
+    <div class="row collapsing" id="mainform"  >
       <div class="col-sm">
         <!-- -----------Form begin--------- -->
       <form id="form">
@@ -58,7 +58,27 @@
 
     <!-- ------form end-------- -->
       </form>
-      
+      <!----------Modal-->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Thank You!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src='assets/productLogo.png' class="center"></img>
+              <br>
+              <p>
+                We will process your request in the order it was received. If you have any further questions please reach out to product@cardlytics.com
+              </p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
     <!-----grid system to enforce left alignment-->
     </div>
       <div class="col-sm">
